@@ -179,7 +179,7 @@ public class ArbesTelephoneBillCalculator implements TelephoneBillCalculator {
             // ošetříme převod z double na big decimal a zaokrouhlíme u problémových hodnot vzhůru
 
             BigDecimal celkovaCenaD = new BigDecimal(Double.toString(celkovaCena));
-            BigDecimal zaokrouhlenaCelkovaCena = celkovaCenaD.setScale(2, RoundingMode.UP);
+            BigDecimal zaokrouhlenaCelkovaCena = celkovaCenaD.setScale(2, RoundingMode.HALF_UP);
 
             return zaokrouhlenaCelkovaCena;
 
